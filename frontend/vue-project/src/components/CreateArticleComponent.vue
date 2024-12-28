@@ -1,44 +1,46 @@
 <template>
     <div class="create-article">
-        <quill-editor theme="snow" :modules="modules"  :toolbar="full" ref="editor">
+        <!-- <quill-editor theme="snow" :modules="modules"  :toolbar="full" ref="editor">
             <template #toolbar>
       <div id="my-toolbar">
-        <!-- Add buttons as you would before -->
+         Add buttons as you would before 
         <button class="ql-bold" @click="saveArticle">Save</button>
         <button class="ql-italic" @click="emptyArticle">Clear</button>
       </div>
     </template>
-        </quill-editor>
+        </quill-editor> -->
+
+        <div id="editor-parent">
+            <div id="editor" ref="editor"></div>
+        </div>
     </div>
 </template>
 
 <script>
 
-
-
-import { QuillEditor } from '@vueup/vue-quill'
-import '@vueup/vue-quill/dist/vue-quill.snow.css';
-import { ImageDrop } from 'quill-image-drop-module';
-
-
-
-
-
-
-
+import Quill from 'quill';
+import 'quill/dist/quill.snow.css';
 
 export default {
     name: 'CreateArticleComponent',
-    components: {
-    QuillEditor
+    mounted() {
+        this.quill = new Quill(this.$refs.editor, {
+            theme: 'snow',
+            modules: {
+                toolbar: [
+                    [{ 'header': '1'}, {'header': '2'}, { 'font': [] }],
+                    [{size: []}],
+                    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+                    [{'list': 'ordered'}, {'list': 'bullet'}, 
+                     {'indent': '-1'}, {'indent': '+1'}],
+                    ['link', 'image', 'video'],
+                    ['clean']
+                ]
+            }
+        });
     },
-    setup: () => {
-        const modules = {
-            name: 'ImageDrop',
-            module: ImageDrop,           
-        }
-       return { modules }
-    },
+    
+    
   
 
 /**
@@ -74,8 +76,18 @@ Returns the contents of the editor.
 </script>
 
 <style scoped>
-.editor {
-    height: 400px;
+#editor-parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#editor {
+    height: 100%;
+    width: 40%;
 }
 </style>
 
