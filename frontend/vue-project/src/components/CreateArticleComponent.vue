@@ -18,9 +18,13 @@
 
 <script>
 
+
 import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 
+import QuillResizeImage from 'quill-resize-image';
+
+Quill.register("modules/resize", QuillResizeImage);
 export default {
     name: 'CreateArticleComponent',
     mounted() {
@@ -34,9 +38,19 @@ export default {
                     [{'list': 'ordered'}, {'list': 'bullet'}, 
                      {'indent': '-1'}, {'indent': '+1'}],
                     ['link', 'image', 'video'],
-                    ['clean']
-                ]
+                    [{ 'align': [] }],
+                    ['clean'],
+                ],
+                resize: {
+                locale: {}
             }
+            },
+            formats: [
+                'header', 'font', 'size',
+                'bold', 'italic', 'underline', 'strike', 'blockquote', 'indent',
+                'link', 'image', 'video', 'align', 
+            ]
+            
         });
     },
     
@@ -89,5 +103,6 @@ Returns the contents of the editor.
     height: 100%;
     width: 40%;
 }
+
 </style>
 
