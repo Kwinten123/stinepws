@@ -1,4 +1,5 @@
 <template>
+  <NavBarComponent />
   <div class="container">
     <div class="square-container">
       <form @submit.prevent="handleSubmit">
@@ -45,15 +46,25 @@ export default {
 
 
           //TODO - implement login logic
-          // for now, this :
-        const username = "admin"
-          const password = "dP5Ua:L*0.+3"
+      // for now, this :
+      const stineUsername = "Stine"
+      const stinePassword = "7Ddv%O5wn$1^"
+          
+      const meganUsername = "Megan"
+      const meganPassword = "dP5Ua:L*0.+3"
 
-            if (userData.username === username && userData.password === password) {
-                this.redirectToCreateArticle()
-            } else {
-                this.loginFailed = true;
-            }
+      if (userData.username === stineUsername && userData.password === stinePassword) {
+        console.log("Stine is logged in")
+        sessionStorage.setItem('username', userData.username)
+        this.$router.push({ name: "ArticlesComponent" });
+      } else if (userData.username === meganUsername && userData.password === meganPassword) {
+        console.log("Megan is logged in")
+        sessionStorage.setItem('username', userData.username)
+        this.$router.push({ name: "ArticlesComponent" });
+      } else {
+        console.log("Invalid username or password")
+        this.loginFailed = true;
+      }
             
     //   const response = await this.fetchInterceptor.session.asyncSignIn(userData.username, userData.password)
 
@@ -82,14 +93,7 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-family: 'Magic-School-One',serif;
-  font-size: 11rem;
-  text-shadow: 2px 2px 2px black;
-  color: #ffd338;
-}
+
 
 .container {
   display: flex;
@@ -99,7 +103,7 @@ h1 {
 }
 
 .square-container {
-    background-color: #555;
+    background-color: var(--primary-pink);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -140,7 +144,7 @@ input, select {
   box-sizing: border-box;
   border: solid 1px;
   border-radius: 10px;
-  color: #555;
+  color: black;
 }
 
 h3 {

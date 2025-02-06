@@ -1,0 +1,102 @@
+[debug] [2025-02-06T12:27:16.424Z] ----------------------------------------------------------------------
+[debug] [2025-02-06T12:27:16.426Z] Command:       C:\Users\31626\DOWNLO~1\firebase-tools-instant-win.exe C:\Users\31626\.cache\firebase\tools\lib\node_modules\firebase-tools\lib\bin\firebase init
+[debug] [2025-02-06T12:27:16.426Z] CLI Version:   13.30.0
+[debug] [2025-02-06T12:27:16.426Z] Platform:      win32
+[debug] [2025-02-06T12:27:16.426Z] Node Version:  v18.5.0
+[debug] [2025-02-06T12:27:16.427Z] Time:          Thu Feb 06 2025 13:27:16 GMT+0100 (GMT+01:00)
+[debug] [2025-02-06T12:27:16.427Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-06T12:27:16.433Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-06T12:27:16.434Z] > authorizing via signed-in user (quinten.hoogkamer@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\31626\stinePws_deploy
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2025-02-06T12:30:48.295Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:48.295Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:48.296Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2025-02-06T12:30:48.296Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"stinepws","name":"stinepws"}
+[debug] [2025-02-06T12:30:48.812Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[debug] [2025-02-06T12:30:48.812Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/cp.4665768721923807331"}
+[debug] [2025-02-06T12:30:48.813Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:48.813Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:48.813Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 [none]
+[debug] [2025-02-06T12:30:49.616Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 200
+[debug] [2025-02-06T12:30:49.616Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 {"name":"operations/cp.4665768721923807331"}
+[debug] [2025-02-06T12:30:50.127Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-02-06T12:30:50.127Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:50.127Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:50.128Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 [none]
+[debug] [2025-02-06T12:30:50.920Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 200
+[debug] [2025-02-06T12:30:50.920Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 {"name":"operations/cp.4665768721923807331"}
+[debug] [2025-02-06T12:30:51.933Z] [Project Creation Poller] Retrying task index 0
+[debug] [2025-02-06T12:30:51.934Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:51.934Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:51.934Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 [none]
+[debug] [2025-02-06T12:30:52.728Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 200
+[debug] [2025-02-06T12:30:52.728Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/cp.4665768721923807331 {"name":"operations/cp.4665768721923807331","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"677331101054","projectId":"stinepws","lifecycleState":"ACTIVE","name":"stinepws","createTime":"2025-02-06T12:30:49.551400Z"}}
+[debug] [2025-02-06T12:30:52.729Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:52.729Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:52.729Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/stinepws:addFirebase [none]
+[debug] [2025-02-06T12:30:56.145Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/stinepws:addFirebase 200
+[debug] [2025-02-06T12:30:56.146Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/stinepws:addFirebase {"name":"operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx"}
+[debug] [2025-02-06T12:30:56.146Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:56.146Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:30:56.146Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx [none]
+[debug] [2025-02-06T12:31:00.200Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx 200
+[debug] [2025-02-06T12:31:00.200Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx {"name":"operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx"}
+[debug] [2025-02-06T12:31:00.706Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-02-06T12:31:00.706Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:00.706Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:00.706Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx [none]
+[debug] [2025-02-06T12:31:01.458Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx 200
+[debug] [2025-02-06T12:31:01.458Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx {"name":"operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx"}
+[debug] [2025-02-06T12:31:02.463Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-02-06T12:31:02.464Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:02.464Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:02.464Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx [none]
+[debug] [2025-02-06T12:31:03.153Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx 200
+[debug] [2025-02-06T12:31:03.153Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx {"name":"operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx"}
+[debug] [2025-02-06T12:31:05.164Z] [Add Firebase Poller] Retrying task index 0
+[debug] [2025-02-06T12:31:05.165Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:05.165Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:05.165Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx [none]
+[debug] [2025-02-06T12:31:05.736Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx 200
+[debug] [2025-02-06T12:31:05.736Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx {"name":"operations/workflows/MGJkYmYyOTMtZTI3MC00MmExLTkxYjMtNDgzYjc4NGM4NzIx","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"stinepws","projectNumber":"677331101054","displayName":"stinepws","name":"projects/stinepws","resources":{"hostingSite":"stinepws"}}}
+[info] 
+[info] === Your Firebase project is ready! ===
+[info] 
+[info] Project information:
+[info]    - Project ID: stinepws
+[info]    - Project Name: stinepws
+[info] 
+[info] Firebase console is available at
+[info] https://console.firebase.google.com/project/stinepws/overview
+[info] i  Using project stinepws (stinepws) 
+[info] 
+=== Hosting Setup
+[debug] [2025-02-06T12:31:05.760Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:05.760Z] Checked if tokens are valid: true, expires at: 1738847846379
+[debug] [2025-02-06T12:31:05.760Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/stinepws [none]
+[debug] [2025-02-06T12:31:06.554Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/stinepws 200
+[debug] [2025-02-06T12:31:06.554Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/stinepws {"projectId":"stinepws","projectNumber":"677331101054","displayName":"stinepws","name":"projects/stinepws","resources":{"hostingSite":"stinepws"},"state":"ACTIVE","etag":"1_b5716b27-32a0-4052-8493-18b83d1bec3a"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
